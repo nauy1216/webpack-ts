@@ -1,0 +1,27 @@
+{
+  "name": "webpack-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "typescript init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nauy1216/webpack-ts.git"
+  },
+  "keywords": [
+    "webpack",
+    "typescript",
+    "javascript"
+  ],
+  "author": "liuchengyuan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nauy1216/webpack-ts/issues"
+  },
+  "homepage": "https://github.com/nauy1216/webpack-ts#readme",
+  "dependencies": {
+    "typescript": "^4.0.2"
+  }
+}
