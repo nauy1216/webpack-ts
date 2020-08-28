@@ -9,9 +9,10 @@ interface PluginClass {
     apply(tap: Tapable, ...args: any[]): any
 }
 
-type WebpackPlugin = PluginClass | PluginFunc
+export type WebpackPlugin = PluginClass | PluginFunc
 
-class Tapable {
+// 如果当前模块没有导出则默认为全局定义， 在其他文件可不导入使用这里定义的类型声明
+export default class Tapable {
     private _plugins: {[key: string]: WebpackPlugin[]}
 
     constructor() {
