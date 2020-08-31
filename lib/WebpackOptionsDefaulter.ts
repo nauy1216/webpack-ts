@@ -4,6 +4,9 @@ export default class WebpackOptionsDefaulter {
     defaults!: {[key: string]: any}
 
     constructor() {
+        this.config = {};
+        this.defaults = {};
+        
         this.set('devtool', false);
         this.set('context', process.cwd());
         this.set('module', 'call', (value: any) => Object.assign({}, value));
@@ -77,7 +80,7 @@ export default class WebpackOptionsDefaulter {
     }
 
 
-    process(options: WebpackOptions) {
+    process(options: WebpackOptions): WebpackOptions{
         options = Object.assign({}, options);
         for (let name in this.defaults) {
             const config = this.config[name];

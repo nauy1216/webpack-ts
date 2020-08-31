@@ -5,7 +5,9 @@ import {WebpackOptions, OutputOpts} from './types/WebpackOptions'
 
 export default class Compiler extends Tapable {
     parser: Parser
+    inputFileSystem: any  /**TODO */
     outputFileSystem: any /**TODO */
+    watchFileSystem: any  /**TODO */
     outputPath: string
     outputOptions: OutputOpts | undefined
     options!: WebpackOptions
@@ -13,6 +15,8 @@ export default class Compiler extends Tapable {
     children: any[]
     records: any
     name: string
+    context!: string
+    rules?: any[]
 
     constructor() {
         super()

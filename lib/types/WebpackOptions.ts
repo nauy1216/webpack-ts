@@ -9,17 +9,20 @@ interface EntryOpts {
 }
 
 interface Module {
-
+    rules: any[]
 }
 
 export interface OutputOpts {
-
+    path: string            // bundle输出的目录
+    filename: string        // 输出的文件名
+    /**TODO 这里后期需要去掉一个 */
+    fileName: string        // 输出的文件名 
 }
 
 export interface WebpackOptions {
     context?: string
     devServer?: DevServerOpts
-    evtool?: boolean
+    devtool?: boolean
     entry?: EntryOpts
     module?: Module
     node?: any

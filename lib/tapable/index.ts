@@ -348,9 +348,9 @@ export default class Tapable {
         else this._plugins[name].push(fn);
     }
 
-    apply() {
-        for(var i = 0; i < arguments.length; i++) {
-            arguments[i].apply(this)
+    apply(...args: WebpackPlugin[]) {
+        for(var i = 0; i < args.length; i++) {
+            (args[i] as PluginClass).apply(this)
         }
     }
 
